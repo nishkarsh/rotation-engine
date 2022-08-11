@@ -1,0 +1,24 @@
+{
+  "name": "rotation-engine",
+  "version": "1.0.0",
+  "description": "A rotation engine to rotate the elements in a square table of elements represented by a 1-D array.",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nishkarsh/rotation-engine.git"
+  },
+  "author": "Nishkarsh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishkarsh/rotation-engine/issues"
+  },
+  "homepage": "https://github.com/nishkarsh/rotation-engine#readme",
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.7.4"
+  }
+}
