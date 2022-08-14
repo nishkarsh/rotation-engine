@@ -59,10 +59,12 @@ id,json,is_valid
 - A single element JSON array in input CSV.
 - A 9801 (99 x 99) elements JSON array in input CSV.
 - An invalid table (i.e. a non-square table).
+- An empty CSV file or a file with only the headers outputs an empty output CSV with only the headers.
 
 ## Out of Scope Cases
 - Handling invalid JSON in input CSV, e.g. `""`
 - Processing the streams in parallel
+- Variable number of columns in the input CSV is not handled.
 
 ## Things kept in mind
 - Splitting the logic across entities ensuring each module has a single responsibility.
