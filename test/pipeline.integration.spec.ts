@@ -8,7 +8,7 @@ import { expect } from 'chai';
 import { createCsvFormatter } from '../src/csv-formatter';
 import { createCsvParser } from '../src/csv-parser';
 
-describe('table processing pipeline', () => {
+describe('table processing pipeline (integration)', () => {
     it('should process csv file and return proper output', (done) => {
         const streamProcessor = new StreamProcessor(new Validator(), new SingleElementRotator())
         const source = createReadStream("samples/sample-input.csv");

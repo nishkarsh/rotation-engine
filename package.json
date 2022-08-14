@@ -5,7 +5,7 @@
   "main": "cli.js",
   "scripts": {
     "build": "tsc",
-    "test": "ts-mocha src/**/*.spec.ts"
+    "test": "ts-mocha -p tsconfig.json test/**/*.spec.ts test/*.spec.ts"
   },
   "repository": {
     "type": "git",
