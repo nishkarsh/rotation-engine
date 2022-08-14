@@ -1,12 +1,12 @@
 import { createReadStream, readFileSync } from 'fs';
 import { Pipeline } from '../src/pipeline';
-import { CsvStreamParser } from '../src/csv-stream-parser';
-import { CsvStreamFormatter } from '../src/csv-stream-formatter';
 import { StreamProcessor } from '../src/stream-processor';
 import { Validator } from '../src/validator';
 import { SingleElementRotator } from '../src/single-element-rotator';
 import { PassThrough } from 'stream';
 import { expect } from 'chai';
+import { createCsvFormatter } from '../src/csv-formatter';
+import { createCsvParser } from '../src/csv-parser';
 
 describe('table processing pipeline', () => {
     it('should process csv file and return proper output', (done) => {
@@ -26,9 +26,9 @@ describe('table processing pipeline', () => {
         });
 
         const pipeline = new Pipeline(source,
-            CsvStreamParser.create(),
+            createCsvParser(),
             streamProcessor,
-            CsvStreamFormatter.create(),
+            createCsvFormatter(),
             destination);
 
         pipeline.process();

@@ -8,8 +8,6 @@ const defaultFormatterOptions = {
     columns: columns
 }
 
-export class CsvStreamFormatter {
-    public static create(options: Options = defaultFormatterOptions): Transform {
-        return stringify(options);
-    }
+export const createCsvFormatter = (options: Options = defaultFormatterOptions): Transform => {
+    return stringify(options);
 }

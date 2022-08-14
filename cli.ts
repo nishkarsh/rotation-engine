@@ -1,11 +1,11 @@
 import { createReadStream } from 'fs';
 import { argv, exit } from 'process';
 import { Pipeline } from './src/pipeline';
-import { CsvStreamParser } from './src/csv-stream-parser';
+import { createCsvParser } from './src/csv-parser';
 import { Validator } from './src/validator';
 import { SingleElementRotator } from './src/single-element-rotator';
 import { StreamProcessor } from './src/stream-processor';
-import { CsvStreamFormatter } from './src/csv-stream-formatter';
+import { createCsvFormatter } from './src/csv-formatter';
 
 const args = argv.splice(2)
 
@@ -21,9 +21,9 @@ const streamProcessor = new StreamProcessor(new Validator(), new SingleElementRo
 
 const pipeline = new Pipeline(
     createReadStream(inputFilePath),
-    CsvStreamParser.create(),
+    createCsvParser(),
     streamProcessor,
-    CsvStreamFormatter.create(),
+    createCsvFormatter(),
     process.stdout
 );
 

@@ -6,8 +6,6 @@ const defaultParserOptions = {
     columns: true
 }
 
-export class CsvStreamParser {
-    public static create(options: Options = defaultParserOptions): Transform {
-        return parse(options);
-    }
+export const createCsvParser = (options: Options = defaultParserOptions): Transform => {
+    return parse(options);
 }
