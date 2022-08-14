@@ -4,7 +4,7 @@ import { columns } from './types/output-row';
 
 const defaultFormatterOptions = {
     header: true,
-    quoted_match: "[]",
+    quoted_match: /^\[.*]$/,
     columns: columns
 }
 
