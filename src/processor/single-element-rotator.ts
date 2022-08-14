@@ -1,4 +1,4 @@
-import { Table } from './table';
+import { Table } from '../types/table';
 
 export class SingleElementRotator {
     public async rotate(table: Table): Promise<Table> {

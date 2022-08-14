@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { Table } from '../src/table';
+import { Table } from '../../src/types/table';
 
 describe("table", () => {
     it("should store size as square root of total element length", () => {

@@ -1,9 +1,9 @@
 import { Transform } from "stream";
 import { Validator } from './validator';
 import { SingleElementRotator } from './single-element-rotator';
-import { InputRow, ParsedInputRow, toParsedInputRow } from './types/input-row';
-import { createInvalidOutputRow, createValidOutputRow, OutputRow } from './types/output-row';
-import { Table } from './table';
+import { InputRow, ParsedInputRow, toParsedInputRow } from '../types/input-row';
+import { createInvalidOutputRow, createValidOutputRow, OutputRow } from '../types/output-row';
+import { Table } from '../types/table';
 
 const defaultOptions = {
     writableObjectMode: true,

@@ -2,9 +2,9 @@ import { createReadStream } from 'fs';
 import { argv, exit } from 'process';
 import { Pipeline } from './src/pipeline';
 import { createCsvParser } from './src/csv-parser';
-import { Validator } from './src/validator';
-import { SingleElementRotator } from './src/single-element-rotator';
-import { StreamProcessor } from './src/stream-processor';
+import { Validator } from './src/processor/validator';
+import { SingleElementRotator } from './src/processor/single-element-rotator';
+import { StreamProcessor } from './src/processor/stream-processor';
 import { createCsvFormatter } from './src/csv-formatter';
 
 const args = argv.splice(2)

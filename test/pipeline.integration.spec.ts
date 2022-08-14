@@ -1,8 +1,8 @@
 import { createReadStream, readFileSync } from 'fs';
 import { Pipeline } from '../src/pipeline';
-import { StreamProcessor } from '../src/stream-processor';
-import { Validator } from '../src/validator';
-import { SingleElementRotator } from '../src/single-element-rotator';
+import { StreamProcessor } from '../src/processor/stream-processor';
+import { Validator } from '../src/processor/validator';
+import { SingleElementRotator } from '../src/processor/single-element-rotator';
 import { PassThrough } from 'stream';
 import { expect } from 'chai';
 import { createCsvFormatter } from '../src/csv-formatter';
@@ -11,7 +11,7 @@ import { createCsvParser } from '../src/csv-parser';
 describe('table processing pipeline', () => {
     it('should process csv file and return proper output', (done) => {
         const streamProcessor = new StreamProcessor(new Validator(), new SingleElementRotator())
-        const source = createReadStream("sample-input.csv");
+        const source = createReadStream("samples/sample-input.csv");
         const destination = new PassThrough({ writableObjectMode: true, readableObjectMode: true });
 
         let actualOutput = "";
@@ -20,7 +20,7 @@ describe('table processing pipeline', () => {
         });
 
         destination.on('end', () => {
-            const expectedOutput = readFileSync('sample-output.csv', 'utf8');
+            const expectedOutput = readFileSync('samples/sample-output.csv', 'utf8');
             expect(actualOutput).to.equal(expectedOutput);
             done();
         });

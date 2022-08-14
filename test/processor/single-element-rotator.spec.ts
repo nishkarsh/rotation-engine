@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import { SingleElementRotator } from '../src/single-element-rotator';
-import { Table } from '../src/table';
+import { SingleElementRotator } from '../../src/processor/single-element-rotator';
+import { Table } from '../../src/types/table';
 
 describe('single-element-rotator', () => {
     const elementRotator = new SingleElementRotator();

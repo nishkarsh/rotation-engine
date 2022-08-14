@@ -1,11 +1,11 @@
-import { Validator } from '../src/validator';
+import { Validator } from '../../src/processor/validator';
 import { anything, deepEqual, instance, mock, when } from 'ts-mockito';
-import { StreamProcessor } from '../src/stream-processor';
-import { SingleElementRotator } from '../src/single-element-rotator';
-import { InputRow } from '../src/types/input-row';
+import { StreamProcessor } from '../../src/processor/stream-processor';
+import { SingleElementRotator } from '../../src/processor/single-element-rotator';
+import { InputRow } from '../../src/types/input-row';
 import { expect } from 'chai';
-import { OutputRow } from '../src/types/output-row';
-import { Table } from '../src/table';
+import { OutputRow } from '../../src/types/output-row';
+import { Table } from '../../src/types/table';
 
 describe('stream-processor', () => {
     let mockedValidator: Validator;
