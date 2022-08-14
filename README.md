@@ -22,7 +22,7 @@ of elements.
    npm install
    npm run build
    cd dist/
-   node cli.js samples/sample-input.csv > test-output.csv
+   node cli.js ../samples/sample-input.csv > test-output.csv
 ```
 
 ## Functioning
