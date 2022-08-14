@@ -4,7 +4,8 @@
   "description": "A rotation engine to rotate the elements in a square table of elements represented by a 1-D array.",
   "main": "cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "ts-mocha src/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,19 @@
   },
   "homepage": "https://github.com/nishkarsh/rotation-engine#readme",
   "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.1",
+    "chai": "^4.3.6",
     "mocha": "^10.0.0",
     "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "csv-parse": "^5.3.0",
+    "csv-stringify": "^6.2.0",
+    "reflect-metadata": "^0.1.13"
   }
 }
